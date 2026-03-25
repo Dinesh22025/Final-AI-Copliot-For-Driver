@@ -1,0 +1,19 @@
+{
+  "name": "driver-ai-copilot",
+  "version": "1.0.0",
+  "description": "Driver AI Co-Pilot - Full Stack Application",
+  "scripts": {
+    "dev": "npx concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python main.py",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && python main.py",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["react", "flask", "ai", "driver-monitoring"],
+  "author": "",
+  "license": "MIT"
+}
