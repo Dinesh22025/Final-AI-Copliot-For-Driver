@@ -1,11 +1,9 @@
 import axios from 'axios'
 
-// Better API config for local + deployment
+// API configuration
 const api = axios.create({
-  baseURL: import.meta.env.DEV 
-    ? 'http://localhost:8000'  // Local: backend routes include /api/*
-    : import.meta.env.VITE_API_URL || 'https://your-backend.onrender.com',  // Prod: set VITE_API_URL in .env or hosting
-});
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000',
+})
 
 export const setToken = (token) => {
   if (token) {

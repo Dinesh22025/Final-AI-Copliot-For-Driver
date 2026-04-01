@@ -171,7 +171,7 @@ export default function DashboardPage() {
         
         const frame = canvasRef.current.toDataURL('image/jpeg', 0.7)
         
-        const { data } = await api.post('/monitor/analyze', { frame })
+        const { data } = await api.post('/api/monitor/analyze', { frame })
         
         console.log('[Analysis]', data.analysis.status, 'Faces:', data.analysis.faces)
         

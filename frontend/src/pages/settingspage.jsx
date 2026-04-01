@@ -10,7 +10,7 @@ export default function SettingsPage({ user, onUserUpdate }) {
   const [status, setStatus] = useState('')
 
   const save = async () => {
-    const { data } = await api.put('/settings', form)
+    const { data } = await api.put('/api/settings', form)
     onUserUpdate(data.user)
     setStatus('Settings saved')
   }

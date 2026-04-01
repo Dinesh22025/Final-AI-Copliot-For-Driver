@@ -16,7 +16,7 @@ export default function App() {
   useEffect(() => {
     const bootstrap = async () => {
       try {
-        const response = await api.get('/me')
+        const response = await api.get('/api/me')
         setUser(response.data.user)
       } catch {
         setToken(null)

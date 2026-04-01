@@ -12,7 +12,7 @@ export default function AuthPage({ onAuthenticated }) {
     e.preventDefault()
     setError('')
     try {
-      const endpoint = isSignup ? '/auth/signup' : '/auth/login'
+      const endpoint = isSignup ? '/api/auth/signup' : '/api/auth/login'
       const payload = isSignup ? form : { email: form.email, password: form.password }
       console.log('Attempting auth:', endpoint, payload)
       const { data } = await api.post(endpoint, payload)

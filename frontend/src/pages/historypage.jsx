@@ -9,7 +9,7 @@ export default function HistoryPage() {
   const load = async () => {
     try {
       setLoading(true)
-      const { data } = await api.get('/history')
+      const { data } = await api.get('/api/history')
       setHistory(data.items)
       setMeta({ total: data.total, limit: data.limit, overLimit: data.overLimit })
     } catch (error) {
@@ -28,7 +28,7 @@ export default function HistoryPage() {
 
   const clear = async () => {
     if (confirm('Are you sure you want to clear all history?')) {
-      await api.delete('/history/clear')
+      await api.delete('/api/history/clear')
       load()
     }
   }
